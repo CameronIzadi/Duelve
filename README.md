@@ -19,7 +19,7 @@
 
 ## Overview
 
-_**Duelve** is a real-estate application that allows for users to both search for properties both for listing and for short-term homestays.
+**Duelve** is a real-estate application that allows for users to both search for properties both for listing and for short-term homestays.
 
 <br>
 
