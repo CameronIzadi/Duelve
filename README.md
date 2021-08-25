@@ -61,31 +61,31 @@ _The **Duelve** MVP is to have full CRUD, hand rolled css, and authentication fo
 
 - Sign in
 
-![Sign In](https://i.imgur.com/sLJ8HPo.png)
+![Sign In](https://i.imgur.com/VOcFRte.png)
 
 - Sign Up
 
-![Sign Up](https://i.imgur.com/1uhDRET.png)
+![Sign Up](https://i.imgur.com/l5NGUaY.png)
 
 - Homepage
 
-![Homepage](https://i.imgur.com/bh8uoQZ.png)
+![Homepage](https://i.imgur.com/DbBA60T.png)
 
 - Search List
 
-![Search](https://i.imgur.com/B6dAbHQ.png)
+![Search](https://i.imgur.com/Wig18aC.png)
 
 - Property Detail
 
-![Property Detail](https://i.imgur.com/JVoAY7a.png)
+![Property Detail](https://i.imgur.com/3MMZU21.png)
 
 - Edit Property
 
-![Edit Property](https://i.imgur.com/rkoG5Mi.png)
+![Edit Property](https://i.imgur.com/L7fPAaT.png)
 
 - Create Property
 
-![Create Property](https://i.imgur.com/YdjltlL.png)
+![Create Property](https://i.imgur.com/uzwFljs.png)
 
 #### Component Tree
 
@@ -153,7 +153,7 @@ src
 #### ERD Model
 
 
-[ERD](https://i.imgur.com/eU4DcAN.png)
+[ERD](https://i.imgur.com/fdUaceG.png)
 <br>
 
 ***
