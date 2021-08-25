@@ -22,8 +22,7 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+_**Duelve** is a real-estate application that allows for users to both search for properties both for listing and for short-term homestays.
 
 <br>
 
@@ -31,17 +30,19 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **Duelve** MVP is to have full CRUD, be able to create, read, update, and delete. Duelve will have interactive css, signing in users and also registering them. Display the property listings and have proper styling with flexbox/grid and 2 media queries, and a detail page for properties._
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Full Crud (create, read, update, delete),_
+- _Duelve interactive css._
+- _Signing in users + registering them._
+- _Displaying property listings._
+- _Flexbox/grid,_
+- _2 media queries,_
+- _Detail page for properties,_
 
 <br>
 
@@ -51,11 +52,12 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Rendering front page._ |
+|   React Router   | _Rendering components._ |
+|      Axios       | _For communicating with the backend._ |
+
+
+
 
 <br>
 
@@ -112,7 +114,11 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Property.jsx
+      |__ PropertyCreate.jsx
+      |__ PropertyDetail.jsx
+      |__ PropertyEdit.jsx
+      |__ Seller.jsx
 |__ services/
 
 ```
@@ -121,11 +127,26 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                  | Priority | Estimated Time | Time Invested | Actual Time |
+| --------------------- | :------: | :------------: | :-----------: | :---------: |
+| Creating Branches     |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Initial Skeleton.     |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Backend Controllers   |    H     |     4 hrs      |     2 hrs     |     TBD     |
+| Backend Controllers p2|    H     |     4 hrs      |     3 hrs     |     TBD     |
+| Component Setup       |    H     |     3 hrs      |     4 hrs     |     TBD     |
+| DB Setup              |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Backend Function debug|    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Landing Page.         |    H     |     4 hrs      |     2 hrs     |     TBD     |
+| Detail Page           |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| Property Listings     |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Adding Search Bar     |    H     |     2 hrs      |     2 hrs     |     TBD     |
+| Sign-in/Sign-up       |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Media Queries         |    H     |     2 hrs      |     3 hrs     |     TBD     |
+| Debugging             |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Testing functionality |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| TOTAL                 |          |     43 hrs     |      41hrs    |     TBD     |
+
+
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
