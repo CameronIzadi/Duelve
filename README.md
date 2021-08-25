@@ -26,14 +26,14 @@
 ## MVP
 
 
-_The **Duelve** MVP is to have full CRUD, be able to create, read, update, and delete. Duelve will have interactive css, signing in users and also registering them. Display the property listings and have proper styling with flexbox/grid and 2 media queries, and a detail page for properties._
+_The **Duelve** MVP is to have full CRUD, be able to create, read, update, and delete. Duelve will have proper css, signing in users and also registering them. Display the property listings and have proper styling with flexbox/grid and 2 media queries, and a detail page for properties._
 
 <br>
 
 ### Goals
 
 - _Full Crud (create, read, update, delete),_
-- _Duelve interactive css._
+- _Proper CSS._
 - _Signing in users + registering them._
 - _Displaying property listings._
 - _Flexbox/grid,_
