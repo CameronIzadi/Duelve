@@ -1,4 +1,4 @@
-# P4-Placeholder
+# Duelve
 
 - [Overview](#overview)
 - [MVP](#mvp)
