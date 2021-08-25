@@ -154,7 +154,10 @@ src
 
 ## Post-MVP
 
-
+- Have interactive css
+- Filtering through properties
+- Comments
+- Form for contacting seller
 
 ***
 
