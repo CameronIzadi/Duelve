@@ -32,9 +32,9 @@ _The **Duelve** MVP is to have full CRUD, hand rolled css, and authentication fo
 
 ### Goals
 
-- _Full Crud (create, read, update, delete),_
-- _Proper CSS._
-- _Signing in users + registering them._
+- _Full Crud,_
+- _Hand rolled CSS._
+- _User Authentication._
 - _Displaying property listings._
 - _Flexbox/grid,_
 - _2 media queries._
