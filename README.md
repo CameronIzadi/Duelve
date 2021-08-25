@@ -65,29 +65,29 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Sign In](https://i.imgur.com/sLJ8HPo.png)
 
-- Desktop Landing
+- Sign in
 
-![Dummy Link](url)
+![Sign Up](https://i.imgur.com/1uhDRET.png)
 
-- Desktop Hero
+- Sign Up
 
-![Dummy Link](url)
+![Homepage](https://i.imgur.com/bh8uoQZ.png)
 
-- Resource Index
+- Homepage
 
-![Dummy Link](url)
+![Search](https://i.imgur.com/B6dAbHQ.png)
 
-- Resource Show
+- Search List
 
-![Dummy Link](url)
+![Property Detail](https://i.imgur.com/JVoAY7a.png)
 
-- Tablet Resource Index
+- Property Detail
 
-![Dummy Link](url)
+![Edit Property](https://i.imgur.com/rkoG5Mi.png)
 
-- Mobile Resource Index
+- Edit Property
 
 #### Component Tree
 
