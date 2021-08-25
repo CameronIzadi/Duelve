@@ -110,7 +110,7 @@ src
       |__ PropertyCreate.jsx
       |__ PropertyDetail.jsx
       |__ PropertyEdit.jsx
-      |__ Seller.jsx
+      |__ Category.jsx
 |__ services/
 
 ```
