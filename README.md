@@ -26,19 +26,18 @@
 ## MVP
 
 
-_The **Duelve** MVP is to have full CRUD, be able to create, read, update, and delete. Duelve will have proper css, signing in users and also registering them. Display the property listings and have proper styling with flexbox/grid and 2 media queries, and a detail page for properties._
+_The **Duelve** MVP is to have full CRUD, hand rolled css, and authentication for users. Duelve will also display the property listings and have proper styling with flexbox/grid and 2 media queries, and a detail page for properties._
 
 <br>
 
 ### Goals
 
-- _Full Crud (create, read, update, delete),_
-- _Proper CSS._
-- _Signing in users + registering them._
+- _Full Crud,_
+- _Hand rolled CSS._
+- _User Authentication._
 - _Displaying property listings._
 - _Flexbox/grid,_
-- _2 media queries,_
-- _Detail page for properties,_
+- _2 media queries._
 
 <br>
 
@@ -60,34 +59,33 @@ _The **Duelve** MVP is to have full CRUD, be able to create, read, update, and d
 
 #### Wireframes
 
-
-![Sign In](https://i.imgur.com/sLJ8HPo.png)
-
 - Sign in
 
-![Sign Up](https://i.imgur.com/1uhDRET.png)
+![Sign In](https://i.imgur.com/VOcFRte.png)
 
 - Sign Up
 
-![Homepage](https://i.imgur.com/bh8uoQZ.png)
+![Sign Up](https://i.imgur.com/l5NGUaY.png)
 
 - Homepage
 
-![Search](https://i.imgur.com/B6dAbHQ.png)
+![Homepage](https://i.imgur.com/DbBA60T.png)
 
 - Search List
 
-![Property Detail](https://i.imgur.com/JVoAY7a.png)
+![Search](https://i.imgur.com/Wig18aC.png)
 
 - Property Detail
 
-![Edit Property](https://i.imgur.com/rkoG5Mi.png)
+![Property Detail](https://i.imgur.com/3MMZU21.png)
 
 - Edit Property
 
-![Create Property](https://i.imgur.com/YdjltlL.png)
+![Edit Property](https://i.imgur.com/L7fPAaT.png)
 
 - Create Property
+
+![Create Property](https://i.imgur.com/uzwFljs.png)
 
 #### Component Tree
 
@@ -98,21 +96,27 @@ _The **Duelve** MVP is to have full CRUD, be able to create, read, update, and d
 
 
 ``` structure
-
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout.jsx
+|__ screens/
       |__ Property.jsx
       |__ PropertyCreate.jsx
       |__ PropertyDetail.jsx
       |__ PropertyEdit.jsx
       |__ Category.jsx
+      |__ Signin.jsx
+      |__ Signup.jsx
+|__ components/
+      |__ Navbar
+       |__ Navbar.jsx
 |__ services/
-
+      |__ apiconfig.js
+      |__ auth.js
+      |__ properties.js
+      |__ category.js
 ```
 
 #### Time Estimates
@@ -120,10 +124,10 @@ src
 
 | Task                  | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------- | :------: | :------------: | :-----------: | :---------: |
-| Creating Branches     |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Initial Skeleton.     |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Backend Controllers   |    H     |     4 hrs      |     2 hrs     |     TBD     |
-| Backend Controllers p2|    H     |     4 hrs      |     3 hrs     |     TBD     |
+| Creating Branches     |    L     |     1 hrs      |     1 hrs     |    3 hrs    |
+| Initial Skeleton.     |    H     |     1 hrs      |     1 hrs     |     TBD     |
+| Backend Controllers   |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| Backend Controllers p2|    H     |     1 hrs      |     1 hrs     |     TBD     |
 | Component Setup       |    H     |     3 hrs      |     4 hrs     |     TBD     |
 | DB Setup              |    H     |     3 hrs      |     3 hrs     |     TBD     |
 | Backend Function debug|    H     |     3 hrs      |     3 hrs     |     TBD     |
@@ -132,10 +136,12 @@ src
 | Property Listings     |    H     |     3 hrs      |     3 hrs     |     TBD     |
 | Adding Search Bar     |    H     |     2 hrs      |     2 hrs     |     TBD     |
 | Sign-in/Sign-up       |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Media Queries         |    H     |     2 hrs      |     3 hrs     |     TBD     |
+| Styling part 1        |    H     |     4 hrs      |     3 hrs     |     TBD     |
+| Styling part 2        |    H     |     4 hrs      |     3 hrs     |     TBD     |
+| Styling part 3        |    H     |     4 hrs      |     3 hrs     |     TBD     |
 | Debugging             |    H     |     3 hrs      |     3 hrs     |     TBD     |
 | Testing functionality |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| TOTAL                 |          |     43 hrs     |      41hrs    |     TBD     |
+| TOTAL                 |    H     |     48 hrs     |     42hrs     |     TBD     |
 
 
 
@@ -147,7 +153,7 @@ src
 #### ERD Model
 
 
-[ERD](https://i.imgur.com/eU4DcAN.png)
+[ERD](https://i.imgur.com/fdUaceG.png)
 <br>
 
 ***
