@@ -26,6 +26,7 @@ const MainContainer = (props) => {
   useEffect(() => {
     const fetchCategories = async () => {
       const categories = await getAllCategories();
+      console.log(categories)
       setCategories(categories);
     };
     fetchCategories();
