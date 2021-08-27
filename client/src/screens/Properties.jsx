@@ -6,10 +6,10 @@ export default function Properties(props) {
   return (
     <div>
       <h3>Properties</h3>
-      {properties.map((properties) => (
-        <div key={properties.id}>
-          <Link to={`/properties/${properties.id}`}>
-            <p>{property.price}</p>
+      {properties.map((property) => (
+        <div key={property.id}>
+          <Link to={`/properties/${property.id}`}>
+            <p>{property.name}</p>
           </Link>
           {currentUser?.id === property.user_id && (
             <div>

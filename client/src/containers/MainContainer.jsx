@@ -5,8 +5,8 @@ import { Route, Switch } from "react-router-dom";
 // import PropertyEdit from "../screens/PropertyEdit";
 import Properties from "../screens/Properties";
 import Categories from "../screens/Categories";
-import { deleteProperty, getAllProperties } from "../../services/properties";
-import {  getAllCategories, } from "../../services/categories";
+import { deleteProperty, getAllProperties } from "../services/properties";
+import {  getAllCategories, } from "../services/categories";
 
 const MainContainer = (props) => {
   const [properties, setProperties] = useState();
@@ -17,6 +17,7 @@ const MainContainer = (props) => {
   useEffect(() => {
     const fetchProperties = async () => {
       const properties = await getAllProperties();
+      console.log(properties)
       setProperties(properties);
     };
     fetchProperties();
@@ -35,8 +36,6 @@ const MainContainer = (props) => {
   //   setProperties((prevState) => [...prevState, foodData]);
   //   history.push('/properties');
   // };
-
-
 
   const handleDelete = async (id) => {
     await deleteProperty(id);
@@ -65,8 +64,6 @@ const MainContainer = (props) => {
   //   props.setToggleFetch((prev) => !prev);
   //   history.push(`/properties/${propertyId}`);
   // };
-
-
 
 
 
