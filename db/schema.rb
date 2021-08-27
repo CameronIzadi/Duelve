@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_26_134710) do
+ActiveRecord::Schema.define(version: 2021_08_26_194456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,25 +21,37 @@ ActiveRecord::Schema.define(version: 2021_08_26_134710) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "categories_properties", id: false, force: :cascade do |t|
+    t.bigint "property_id", null: false
+    t.bigint "category_id", null: false
+  end
+
   create_table "properties", force: :cascade do |t|
-    t.string "name"
+    t.string "street"
     t.integer "price"
-    t.integer "sqft"
     t.integer "bed"
     t.integer "bath"
-    t.string "street"
+    t.integer "sqft"
     t.string "seller_info"
     t.string "amenities"
+    t.string "picture_1"
+    t.string "picture_2"
+    t.string "picture_3"
+    t.string "picture_4"
+    t.string "picture_5"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
-    t.integer "password_digest"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "properties", "users"
 end
