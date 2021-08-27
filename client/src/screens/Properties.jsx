@@ -9,7 +9,7 @@ export default function Properties(props) {
       {properties.map((properties) => (
         <div key={properties.id}>
           <Link to={`/properties/${properties.id}`}>
-            <p>{property.name}</p>
+            <p>{property.price}</p>
           </Link>
           {currentUser?.id === property.user_id && (
             <div>

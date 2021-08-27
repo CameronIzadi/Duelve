@@ -20,7 +20,7 @@ export const putProperty = async (id, propertyData) => {
   return resp.data;
 };
 
-export const destroyArticle = async (id) => {
+export const deleteProperty = async (id) => {
   const resp = await api.delete(`/properties/${id}`);
   return resp;
 };
