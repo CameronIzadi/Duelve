@@ -75,7 +75,10 @@ const MainContainer = (props) => {
       <Route exact path='/categories/:id'>
           <CategorySearch categories={categories} />
         </Route>
-        <Route path='/categories'>
+        <Route path='/properties/:id'>
+          <PropertyDetail properties={properties} />
+        </Route>
+        <Route path='/'>
           <Categories categories={categories} />
         </Route>
         {/* <Route path='/properties/:id/edit'>
@@ -84,9 +87,6 @@ const MainContainer = (props) => {
         {/* <Route path='/properties/new'>
           <PropertyCreate handleCreate={handleCreate} />
         </Route> */}
-        <Route path='/properties/:id'>
-          <PropertyDetail properties={properties} />
-        </Route>
         <Route path='/properties'>
           <Properties
             properties={properties}

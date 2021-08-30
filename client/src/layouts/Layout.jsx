@@ -4,7 +4,9 @@ export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
+      <Link to='/'>
       <h1>Duelve</h1>
+      </Link>
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
@@ -17,7 +19,7 @@ export default function Layout(props) {
       {currentUser && (
         <div>
           {/* <Link to='/properties'>Properties</Link> */}
-          <Link to='/categories'>Categories</Link>
+          {/* <Link to='/categories'>Categories</Link> */}
         </div>
       )}
       {props.children}
