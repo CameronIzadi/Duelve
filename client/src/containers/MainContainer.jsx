@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 // import PropertyEdit from "../screens/PropertyEdit";
 import Properties from "../screens/Properties";
 import Categories from "../screens/Categories";
+import CategorySearch from "../screens/CategorySearch"
 import { deleteProperty, getAllProperties } from "../services/properties";
 import {  getAllCategories, } from "../services/categories";
 
@@ -71,6 +72,9 @@ const MainContainer = (props) => {
   return (
     <div>
       <Switch>
+      <Route exact path='/categories/:id'>
+          <CategorySearch categories={categories} />
+        </Route>
         <Route path='/categories'>
           <Categories categories={categories} />
         </Route>
