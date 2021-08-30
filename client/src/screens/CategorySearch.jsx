@@ -29,9 +29,9 @@ const CategorySearch = () => {
             <p>{properties?.sqft}</p>
               <p>{properties?.price}</p>
             </Link>
-            <Link to='/properties/new'>
+            {/* <Link to='/properties/new'>
             <button>Create</button>
-            </Link>
+            </Link> */}
             </div>
           ))} 
     </div>
