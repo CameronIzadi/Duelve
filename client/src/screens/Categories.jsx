@@ -11,9 +11,11 @@ export default function Categories(props) {
     <div>
       <h3>Categories</h3>
       {categories?.map((category) => (
+        <div key={category.id}>
         <Link to={`/categories/${category.id}`}>
           <p key={category.id}>{category.name}</p>
-        </Link>
+          </Link>
+        </div>
       ))}
     </div>
   );

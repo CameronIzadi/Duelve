@@ -1,30 +1,37 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { getOneCategory } from "../services/categories/getOneCategory"
-
+import { getOneCategory } from '../services/categories'
+import { Link } from "react-router-dom"
 
 const CategorySearch = () => {
   const [singleCategory, setCategoryData] = useState(null)
-  const { id } = useParams
+  const { id } = useParams()
 
 
   useEffect(() => {
     const fetchCategory = async () => {
       const singleCategory = await getOneCategory(id)
-      console.log(singleCategory)
-      setCategoryData(categoryData);
+      setCategoryData(singleCategory);
     }
     fetchCategory();
   }, [id])
 
 
-
   return (
     <div>
         {singleCategory?.properties?.map((properties) => (
-          <div key={properties.id}>
-            <p>{properties?.street}</p>
+          <div key={properties.id}>
+      <Link to={`/properties/${properties.id}`}>
+            <p>{properties?.street}</p>
+            <p>{properties?.bed}</p>
+            <p>{properties?.bath}</p>
+            <p>{properties?.sqft}</p>
+              <p>{properties?.price}</p>
+            </Link>
+            <Link to='/properties/new'>
+            <button>Create</button>
+            </Link>
             </div>
           ))} 
     </div>

@@ -1,6 +1,7 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: :show
+  before_action :set_property, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:create, :update, :destroy]
+
 
   # GET /properties
   def index
@@ -19,9 +20,9 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
     @property.user = @current_user
     if @property.save
-      render json: @property, status: :created, location: @property
+      render json: @property, status: :created, include: :categories, location: @property
     else
-      render json: @property.errors, status: :unprocessable_entity
+      render json: @property.errors, status: :unprocessable_entity, include: :category
     end
   end
 
@@ -50,6 +51,6 @@ class PropertiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def property_params
-    params.require(:property).permit(:street, :price, :bed, :bath, :sqft, :seller_info, :amenities, :picture_1, :picture_2, :picture_3, :picture_4, :picture_5, :user_id)
+    params.require(:property).permit(:street, :price, :bed, :bath, :sqft, :seller_info, :amenities, :picture_1, :picture_2, :picture_3, :picture_4, :picture_5, :user_id, :category_id)
   end
 end
