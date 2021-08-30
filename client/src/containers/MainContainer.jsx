@@ -33,11 +33,11 @@ const MainContainer = (props) => {
     fetchCategories();
   }, []);
 
-  const handleCreate = async (formData) => {
-    const PropertyData = await postProperty(formData);
-    setProperties((prevState) => [...prevState, PropertyData]);
-    history.push('/properties');
-  };
+  // const handleCreate = async (formData) => {
+  //   const PropertyData = await postProperty(formData);
+  //   setProperties((prevState) => [...prevState, PropertyData]);
+  //   history.push('/properties');
+  // };
 
   const handleDelete = async (id) => {
     await deleteProperty(id);
@@ -54,18 +54,18 @@ const MainContainer = (props) => {
   //   history.push(`/properties`);
   // };
 
-  const handleCategoryAdd = async (categoryId, propertyId) => {
-    const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
-    setProperties((prevState) =>
-      prevState.map((property) => {
-        return property.propertyId === Number(propertyId)
-          ? updatedProperty
-          : property;
-      })
-    );
-    props.setToggleFetch((prev) => !prev);
-    history.push(`/properties/${propertyId}`);
-  };
+  // const handleCategoryAdd = async (categoryId, propertyId) => {
+  //   const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
+  //   setProperties((prevState) =>
+  //     prevState.map((property) => {
+  //       return property.propertyId === Number(propertyId)
+  //         ? updatedProperty
+  //         : property;
+  //     })
+  //   );
+  //   props.setToggleFetch((prev) => !prev);
+  //   history.push(`/properties/${propertyId}`);
+  // };
 
 
 
