@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 // import PropertyCreate from "../screens/PropertyCreate"
 import PropertyDetail from "../screens/PropertyDetail"
 // import PropertyEdit from "../screens/PropertyEdit";
@@ -13,7 +13,7 @@ const MainContainer = (props) => {
   const [properties, setProperties] = useState();
   const [categories, setCategories] = useState([]);
   const { currentUser } = props;
-  const history = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     const fetchProperties = async () => {
