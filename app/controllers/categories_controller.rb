@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
 
-    render json: @categories
+    render json: @categories, include: :properties, status: :ok
   end
 
   # GET /properties/1/categories/2
