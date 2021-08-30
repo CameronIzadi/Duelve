@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 // import PropertyCreate from "../../screens/PropertyCreate/PropertyCreate";
-// import PropertyDetail from "../../screens/PropertyDetail/PropertyDetail";
+import PropertyDetail from "../screens/PropertyDetail"
 // import PropertyEdit from "../screens/PropertyEdit";
 import Properties from "../screens/Properties";
 import Categories from "../screens/Categories";
@@ -84,9 +84,9 @@ const MainContainer = (props) => {
         {/* <Route path='/properties/new'>
           <PropertyCreate handleCreate={handleCreate} />
         </Route> */}
-        {/* <Route path='/properties/:id'>
-          <PropertyDetail categories={categories} />
-        </Route> */}
+        <Route path='/properties/:id'>
+          <PropertyDetail properties={properties} />
+        </Route>
         <Route path='/properties'>
           <Properties
             properties={properties}
