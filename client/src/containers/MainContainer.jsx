@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
-// import PropertyCreate from "../../screens/PropertyCreate/PropertyCreate";
+import { Route, Switch, useHistory } from "react-router-dom";
+import PropertyCreate from "../screens/PropertyCreate"
 import PropertyDetail from "../screens/PropertyDetail"
 // import PropertyEdit from "../screens/PropertyEdit";
 import Properties from "../screens/Properties";
 import Categories from "../screens/Categories";
 import CategorySearch from "../screens/CategorySearch"
-import { deleteProperty, getAllProperties } from "../services/properties";
-import {  getAllCategories, } from "../services/categories";
+import { deleteProperty, getAllProperties, postProperty } from "../services/properties";
+import {  getAllCategories, addCategoryToProperty } from "../services/categories";
 
 const MainContainer = (props) => {
   const [properties, setProperties] = useState();
   const [categories, setCategories] = useState([]);
   const { currentUser } = props;
-  // const history = useHistory();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchProperties = async () => {
@@ -33,11 +33,11 @@ const MainContainer = (props) => {
     fetchCategories();
   }, []);
 
-  // const handleCreate = async (formData) => {
-  //   const foodData = await postProperty(formData);
-  //   setProperties((prevState) => [...prevState, foodData]);
-  //   history.push('/properties');
-  // };
+  const handleCreate = async (formData) => {
+    const PropertyData = await postProperty(formData);
+    setProperties((prevState) => [...prevState, PropertyData]);
+    history.push('/properties');
+  };
 
   const handleDelete = async (id) => {
     await deleteProperty(id);
@@ -54,18 +54,18 @@ const MainContainer = (props) => {
   //   history.push(`/properties`);
   // };
 
-  // const handleCategoryAdd = async (categoryId, propertyId) => {
-  //   const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
-  //   setProperties((prevState) =>
-  //     prevState.map((property) => {
-  //       return property.propertyId === Number(propertyId)
-  //         ? updatedProperty
-  //         : property;
-  //     })
-  //   );
-  //   props.setToggleFetch((prev) => !prev);
-  //   history.push(`/properties/${propertyId}`);
-  // };
+  const handleCategoryAdd = async (categoryId, propertyId) => {
+    const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
+    setProperties((prevState) =>
+      prevState.map((property) => {
+        return property.propertyId === Number(propertyId)
+          ? updatedProperty
+          : property;
+      })
+    );
+    props.setToggleFetch((prev) => !prev);
+    history.push(`/properties/${propertyId}`);
+  };
 
 
 
@@ -75,6 +75,12 @@ const MainContainer = (props) => {
       <Route exact path='/categories/:id'>
           <CategorySearch categories={categories} />
         </Route>
+        <Route path='/properties/new'>
+          <PropertyCreate handleCreate={handleCreate}
+            categories={categories}
+            handleCategoryAdd={handleCategoryAdd}/>
+          
+        </Route>
         <Route path='/properties/:id'>
           <PropertyDetail properties={properties} />
         </Route>
@@ -83,9 +89,6 @@ const MainContainer = (props) => {
         </Route>
         {/* <Route path='/properties/:id/edit'>
           <PropertyEdit properties={properties} handleUpdate={handleUpdate} />
-        </Route> */}
-        {/* <Route path='/properties/new'>
-          <PropertyCreate handleCreate={handleCreate} />
         </Route> */}
         <Route path='/properties'>
           <Properties

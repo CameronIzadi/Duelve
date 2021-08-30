@@ -28,7 +28,10 @@ const CategorySearch = () => {
             <p>{properties?.bath}</p>
             <p>{properties?.sqft}</p>
               <p>{properties?.price}</p>
-        </Link>
+            </Link>
+            <Link to='/properties/new'>
+            <button>Create</button>
+            </Link>
             </div>
           ))} 
     </div>
