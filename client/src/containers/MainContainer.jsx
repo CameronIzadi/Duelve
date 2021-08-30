@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
-import PropertyCreate from "../screens/PropertyCreate"
+// import PropertyCreate from "../screens/PropertyCreate"
 import PropertyDetail from "../screens/PropertyDetail"
 // import PropertyEdit from "../screens/PropertyEdit";
 import Properties from "../screens/Properties";
@@ -75,12 +75,12 @@ const MainContainer = (props) => {
       <Route exact path='/categories/:id'>
           <CategorySearch categories={categories} />
         </Route>
-        <Route path='/properties/new'>
+        {/* <Route path='/properties/new'>
           <PropertyCreate handleCreate={handleCreate}
             categories={categories}
             handleCategoryAdd={handleCategoryAdd}/>
           
-        </Route>
+        </Route> */}
         <Route path='/properties/:id'>
           <PropertyDetail properties={properties} />
         </Route>
