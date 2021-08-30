@@ -6,8 +6,8 @@ import PropertyDetail from "../screens/PropertyDetail"
 import Properties from "../screens/Properties";
 import Categories from "../screens/Categories";
 import CategorySearch from "../screens/CategorySearch"
-import { deleteProperty, getAllProperties, postProperty } from "../services/properties";
-import {  getAllCategories, addCategoryToProperty } from "../services/categories";
+import { deleteProperty, getAllProperties } from "../services/properties";
+import {  getAllCategories } from "../services/categories";
 
 const MainContainer = (props) => {
   const [properties, setProperties] = useState();
