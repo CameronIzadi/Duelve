@@ -16,7 +16,7 @@ export default function Layout(props) {
       <hr />
       {currentUser && (
         <div>
-          <Link to='/properties'>Properties</Link>
+          {/* <Link to='/properties'>Properties</Link> */}
           <Link to='/categories'>Categories</Link>
         </div>
       )}
