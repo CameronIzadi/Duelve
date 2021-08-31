@@ -28,7 +28,7 @@ class PropertiesController < ApplicationController
 
   # PATCH/PUT /properties/1
   def update
-    @property = @current_user.articles.find(params[:id])
+    @property = @current_user.properties.find(params[:id])
     if @property.update(property_params)
       render json: @property
     else
@@ -38,7 +38,7 @@ class PropertiesController < ApplicationController
 
   # DELETE /properties/1
   def destroy
-    @property = @current_user.articles.find(params[:id])
+    @property = @current_user.properties.find(params[:id])
     @property.destroy
   end
 

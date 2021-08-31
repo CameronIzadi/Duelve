@@ -76,7 +76,7 @@ const MainContainer = (props) => {
           
           <PropertyEdit handleUpdate={handleUpdate}
             categories={categories} />
-         </Route>
+          </Route>
       <Route exact path='/categories/:id'>
           <CategorySearch categories={categories} />
         </Route>
@@ -89,7 +89,7 @@ const MainContainer = (props) => {
           
         </Route>
         <Route path='/properties/:id'>
-          <PropertyDetail properties={properties} />
+          <PropertyDetail properties={properties} handleDelete={handleDelete}/>
         </Route>
         <Route path='/'>
           <Categories categories={categories} />

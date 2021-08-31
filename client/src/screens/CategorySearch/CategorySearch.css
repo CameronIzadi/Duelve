@@ -34,3 +34,18 @@
   position: absolute;
   bottom: 0%;
 }
+
+@media (max-width: 800px) {
+  .classesRoot {
+    /* display: block; */
+    padding: 20px;
+  }
+  .classesCover {
+    width: 300px;
+  }
+
+  .classesContent {
+    display: block;
+    height: 140px;
+  }
+}
