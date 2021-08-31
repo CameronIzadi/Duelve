@@ -1,0 +1,36 @@
+.classesRoot {
+  display: flex;
+  padding: 20px;
+}
+
+.classesCover {
+  width: 500px;
+  position: absolute;
+  right: 0%;
+}
+
+.classesCover:hover {
+  opacity: 70%;
+}
+
+.classesContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.bath {
+  padding: 30px;
+}
+
+.bed {
+  text-align: center;
+}
+
+.street:hover {
+  opacity: 65%;
+}
+
+#lol {
+  position: absolute;
+  bottom: 0%;
+}

@@ -5,8 +5,11 @@ export default function Layout(props) {
   return (
     <header>
       <Link to='/'>
-      <h1>Duelve</h1>
+        <h1>Duelve</h1>
       </Link>
+      <Link to='/properties/new'>
+            <button id="#lol">Create</button>
+        </Link>
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
@@ -18,8 +21,8 @@ export default function Layout(props) {
       <hr />
       {currentUser && (
         <div>
-          {/* <Link to='/properties'>Properties</Link> */}
-          {/* <Link to='/categories'>Categories</Link> */}
+          {/* <Link to='/properties'>Properties</Link>
+          <Link to='/categories'>Categories</Link> */}
         </div>
       )}
       {props.children}

@@ -1,5 +1,5 @@
 // import { Link } from 'react-router-dom';
-import { getOneProperty } from '../services/properties'
+import { getOneProperty } from '../../services/properties'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 
@@ -20,11 +20,11 @@ export default function PropertyDetail() {
   return (
     <div>
       <p>{singleProperty?.seller_info}</p>
-      <p>{singleProperty?.picture_1}</p>
-      <p>{singleProperty?.picture_2}</p>
-      <p>{singleProperty?.picture_3}</p>
-      <p>{singleProperty?.picture_4}</p>
-      <p>{singleProperty?.picture_5}</p>
+      <img src={singleProperty?.picture_1} alt="/"/>
+      <img src={singleProperty?.picture_2} alt="/"/>
+      <img src={singleProperty?.picture_3} alt="/"/>
+      <img src={singleProperty?.picture_4} alt="/"/>
+      <img src={singleProperty?.picture_5} alt="/"/>
           <p>{singleProperty?.street}</p>
           <p>{singleProperty?.price}</p>
           <p>{singleProperty?.bed}</p>

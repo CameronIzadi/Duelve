@@ -3,8 +3,8 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
 import MainContainer from './containers/MainContainer';
 import Layout from './layouts/Layout';
-import Login from './screens/Login';
-import Register from './screens/Register';
+import Login from './screens/Login/Login';
+import Register from './screens/Register/Register';
 import { loginUser, registerUser, verifyUser, removeToken, } from './services/auth';
 
 function App() {

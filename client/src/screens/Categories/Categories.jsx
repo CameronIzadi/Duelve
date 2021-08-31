@@ -13,7 +13,8 @@ export default function Categories(props) {
       {categories?.map((category) => (
         <div key={category.id}>
         <Link to={`/categories/${category.id}`}>
-          <p key={category.id}>{category.name}</p>
+            <p key={category.id}>{category.name}</p>
+            {/* <h2>{category[0]?.picture_1}</h2> */}
           </Link>
         </div>
       ))}

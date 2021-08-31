@@ -18,10 +18,16 @@ User.destroy_all
 
   puts "#{User.count} users created."
 
-  @standard = Category.create!(name: 'standard')
-  @modern = Category.create!(name: 'modern')
+  @houses = Category.create!(name: 'Houses')
+  @townhomes = Category.create!(name: 'Townhomes')
+  @condos = Category.create!(name: 'Condos')
+  @multifamily = Category.create!(name: 'Multi-Family')
+  @apartments = Category.create!(name: 'Apartments')
 
-  @format = [@standard, @modern]
+
+
+
+  @format = [@houses, @townhomes, @condos, @multifamily, @apartments]
 
   puts "#{Category.count} categories created."
 
@@ -33,15 +39,32 @@ User.destroy_all
     sqft: 1234,
     seller_info: "Broke, Morgan Steet",
     amenities: "Wifi, Free breakfast",
-    picture_1: "Random1",
+    picture_1: "https://cf.bstatic.com/images/hotel/max1024x768/312/312698222.jpg",
     picture_2: "Random2",
     picture_3: "Random3",
     picture_4: "Random4",
     picture_5: "Random5",
     user: @gabriel,
-    categories: [@standard],
+    categories: [@houses],
   )
 
+
+  Property.create!(
+    street: "Pretty Home wow",
+    price: 7000,
+    bed: 3,
+    bath: 5,
+    sqft: 2400,
+    seller_info: "More stuff org",
+    amenities: "Free Money",
+    picture_1: "https://photos.zillowstatic.com/fp/e8a9fea819687e22b0255ef52079c43e-p_e.jpg",
+    picture_2: "Random2",
+    picture_3: "Random3",
+    picture_4: "Random4",
+    picture_5: "Random5",
+    user: @gabriel,
+    categories: [@houses],
+  )
 
 
   puts "#{Property.count} properties created."
