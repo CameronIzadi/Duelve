@@ -1,8 +1,8 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getOneProperty } from '../../services/properties'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-
+import { deleteProperty } from '../../services/properties'
 
 export default function PropertyDetail() {
   const { id } = useParams()
@@ -16,6 +16,13 @@ export default function PropertyDetail() {
     }
     fetchProperty();
   }, [id])
+
+
+  const handleDelete = async (id) => {
+    await deleteProperty(id);
+    setPropertyData((prevState) => prevState.filter((singleProperty) => singleProperty.id !== id));
+  };
+
 
   return (
     <div>
@@ -31,7 +38,10 @@ export default function PropertyDetail() {
           <p>{singleProperty?.bath}</p>
           <p>{singleProperty?.sqft}</p>
           <p>{singleProperty?.amenities}</p>
-
+      <button onClick={handleDelete}>Delete Property</button>
+      <Link to={`/properties/${singleProperty?.id}/edit`}>
+        <button>Edit Property</button>
+      </Link>
     </div>
   );
 }

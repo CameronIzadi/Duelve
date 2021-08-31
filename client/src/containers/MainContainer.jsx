@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import PropertyCreate from "../screens/PropertyCreate/PropertyCreate"
 import PropertyDetail from "../screens/PropertyDetail/PropertyDetail"
-// import PropertyEdit from "../screens/PropertyEdit";
+import PropertyEdit from "../screens/PropertyEdit/PropertyEdit";
 import Properties from "../screens/Properties/Properties";
 import Categories from "../screens/Categories/Categories";
-import CategorySearch from "../screens/CategorySearch/CategorySearch"
-import { deleteProperty, getAllProperties, postProperty } from "../services/properties";
+import CategorySearch from "../screens/CategorySearch/CategorySearch";
+import { deleteProperty, getAllProperties, postProperty, putProperty } from "../services/properties";
 import {  getAllCategories, addCategoryToProperty } from "../services/categories";
 
 const MainContainer = (props) => {
@@ -44,15 +44,15 @@ const MainContainer = (props) => {
     setProperties((prevState) => prevState.filter((property) => property.id !== id));
   };
 
-  // const handleUpdate = async (id, formData) => {
-  //   const updatedProperty = await putProperty(id, formData);
-  //   setProperties((prevState) =>
-  //     prevState.map((property) => {
-  //       return property.id === Number(id) ? updatedProperty : property;
-  //     })
-  //   );
-  //   history.push(`/properties`);
-  // };
+  const handleUpdate = async (id, formData) => {
+    const updatedProperty = await putProperty(id, formData);
+    setProperties((prevState) =>
+      prevState.map((property) => {
+        return property.id === Number(id) ? updatedProperty : property;
+      })
+    );
+    history.push(`/properties`);
+  };
 
   const handleCategoryAdd = async (categoryId, propertyId) => {
     const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
@@ -72,13 +72,20 @@ const MainContainer = (props) => {
   return (
     <div>
       <Switch>
+        <Route path='/properties/:id/edit'>
+          
+          <PropertyEdit handleUpdate={handleUpdate}
+            categories={categories} />
+         </Route>
       <Route exact path='/categories/:id'>
           <CategorySearch categories={categories} />
         </Route>
         <Route path='/properties/new'>
           <PropertyCreate handleCreate={handleCreate}
             categories={categories}
-            handleCategoryAdd={handleCategoryAdd}/>
+            handleCategoryAdd={handleCategoryAdd} />
+          
+  
           
         </Route>
         <Route path='/properties/:id'>
@@ -87,9 +94,6 @@ const MainContainer = (props) => {
         <Route path='/'>
           <Categories categories={categories} />
         </Route>
-        {/* <Route path='/properties/:id/edit'>
-          <PropertyEdit properties={properties} handleUpdate={handleUpdate} />
-        </Route> */}
         <Route path='/properties'>
           <Properties
             properties={properties}

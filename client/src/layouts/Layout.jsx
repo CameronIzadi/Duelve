@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom';
+import "./Layout.css"
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <header>
+    <header id="container">
       <Link to='/'>
-        <h1>Duelve</h1>
+        <h1 id="name">Duelve</h1>
       </Link>
       <Link to='/properties/new'>
-            <button id="#lol">Create</button>
+            <button id="#create">Create</button>
         </Link>
       {currentUser ? (
         <div>
-          <p>{currentUser.username}</p>
-          <button onClick={handleLogout}>Logout</button>
+          <p className="user">{currentUser.username}</p>
+          <button onClick={handleLogout} className="logout">Logout</button>
         </div>
       ) : (
         <Link to='/login'>Login/Register</Link>

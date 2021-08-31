@@ -1,0 +1,37 @@
+/* #container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.user {
+  text-align: left;
+}
+
+#name {
+  text-align: left;
+  text-decoration: none;
+}
+#create {
+  position: absolute;
+  margin: 0 40px;
+  color: black;
+}
+
+#name:visited {
+  color: black;
+}
+
+#name:link {
+  color: black;
+}
+
+#name:active {
+  color: black;
+}
+
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}

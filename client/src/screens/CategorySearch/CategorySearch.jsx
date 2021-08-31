@@ -29,10 +29,10 @@ const CategorySearch = () => {
               </Link>
             <div className="classesContent">
             <h2 className="street">{properties?.street}</h2>
-            <h2 className="bed">{properties?.bed}</h2>
-            <h2 className="bath">{properties?.bath}</h2>
-            <h2 className="sqft">{properties?.sqft}</h2>
-            <h2 className="price">{properties?.price}</h2>
+            <h2 className="bed">Beds: {properties?.bed}</h2>
+            <h2 className="bath">Baths: {properties?.bath}</h2>
+            <h2 className="sqft">Sqft: {properties?.sqft}</h2>
+            <h2 className="price">Asking Price: {properties?.price}</h2>
             </div>
             </div>
             <hr />
