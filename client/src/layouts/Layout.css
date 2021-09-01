@@ -1,22 +1,21 @@
-/* #container {
+.container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-} */
+}
 
-.user {
-  text-align: left;
+.create {
+  position: absolute;
+  left: 0;
 }
 
 #name {
-  text-align: left;
+  display: inline-block;
   text-decoration: none;
 }
-#create {
-  position: absolute;
-  margin: 0 40px;
-  color: black;
-}
+
+/* .user {
+  text-align: left;
+} */
 
 #name:visited {
   color: black;
@@ -29,9 +28,9 @@
 #name:active {
   color: black;
 }
-
+/* 
 .logout {
   position: absolute;
   top: 10px;
   right: 0;
-}
+} */

@@ -36,33 +36,44 @@ export default function PropertyDetail(props) {
 
 
   return (
-    <div class="parent">
-      <div class="div1">
+    <div>
+    <div className="parent">
+      <div className="div1">
         <img className="pic1" src={singleProperty?.picture_1} alt="/" />
       </div>
-      <div class="div2">
+      <div className="div2">
         <img className="pic2" src={singleProperty?.picture_2} alt="/" />
       </div>
-      <div class="div3">
+      <div className="div3">
         <img className="pic3" src={singleProperty?.picture_3} alt="/" />
       </div>
-      <div class="div4">
+      <div className="div4">
         <img className="pic4" src={singleProperty?.picture_4} alt="/" />
       </div>
-      <div class="div5">
+      <div className="div5">
         <img className="pic5" src={singleProperty?.picture_5} alt="/" />
-      </div>
-          <p>{singleProperty?.street}</p>
-          <p>{singleProperty?.price}</p>
-          <p>{singleProperty?.bed}</p>
-          <p>{singleProperty?.bath}</p>
-      <p>{singleProperty?.sqft}</p>
-      <p>{singleProperty?.seller_info}</p>
-          <p>{singleProperty?.amenities}</p>
-      <button onClick={handleSubmit}>Delete Property</button>
+        </div>
+    </div>
+      <p>{singleProperty?.street}</p>
+      
+      <p>Asking Price:{singleProperty?.price}</p>
+      
+      <p>Beds:{singleProperty?.bed}</p>
+      
+      <p>Baths:{singleProperty?.bath}</p>
+      
+      <p>Sqft:{singleProperty?.sqft}</p>
+
+      <p>Seller:{singleProperty?.seller_info}</p>
+
+      <p>Amenities:{singleProperty?.amenities}</p>
+      
+      <button className="deleteDetail" onClick={handleSubmit}>Delete Property</button>
+
       <Link to={`/properties/${singleProperty?.id}/edit`}>
-        <button>Edit Property</button>
+        <button className="editDetail">Edit Property</button>
       </Link>
+
     </div>
   );
 }

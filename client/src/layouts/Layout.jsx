@@ -4,12 +4,13 @@ import "./Layout.css"
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <header id="container">
+    <header>
+      <div className="container">
       <Link to='/'>
         <h1 id="name">Duelve</h1>
       </Link>
       <Link to='/properties/new'>
-            <button id="#create">Create</button>
+            <button className="create">Create</button>
         </Link>
       {currentUser ? (
         <div>
@@ -17,16 +18,17 @@ export default function Layout(props) {
           <button onClick={handleLogout} className="logout">Logout</button>
         </div>
       ) : (
-        <Link to='/login'>Login/Register</Link>
-      )}
-      <hr />
+        <Link to='/login'>Login</Link>
+        )}
+      </div>
+        <hr />
       {currentUser && (
         <div>
           {/* <Link to='/properties'>Properties</Link>
           <Link to='/categories'>Categories</Link> */}
-        </div>
+          </div>
       )}
       {props.children}
-    </header>
+      </header>
   );
 }
