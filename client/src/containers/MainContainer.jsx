@@ -43,13 +43,7 @@ const MainContainer = (props) => {
   };
 
   const handleDelete = async (id) => {
-    await deleteProperty(id);
-    setProperties((prevState) => prevState.filter((property) => property.id !== id));
-  };
-
-  const handleUpdate = async (id, formData) => {
-    const updatedProperty = await putProperty(id, formData);
-    setProperties((prevState) =>
+e) =>
       prevState.map((property) => {
         return property.id === Number(id) ? updatedProperty : property;
       })
