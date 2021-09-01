@@ -68,11 +68,13 @@ export default function PropertyDetail(props) {
 
       <p>Amenities:{singleProperty?.amenities}</p>
       
+      <div className="parenteditdelete">
       <button className="deleteDetail" onClick={handleSubmit}>Delete Property</button>
 
       <Link to={`/properties/${singleProperty?.id}/edit`}>
         <button className="editDetail">Edit Property</button>
       </Link>
+    </div>
 
     </div>
   );

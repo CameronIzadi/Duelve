@@ -34,16 +34,22 @@
   grid-area: 2 / 3 / 3 / 4;
 }
 
-.deleteDetail {
+.parenteditdelete {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+/* .deleteDetail {
   position: absolute;
   bottom: 0;
-  right: 20%;
 }
 
 .editDetail {
   position: absolute;
   bottom: 0;
-}
+  right: ;
+} */
 
 @media (max-width: 900px) {
   .pic1,
