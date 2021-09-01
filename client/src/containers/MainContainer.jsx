@@ -57,17 +57,17 @@ const MainContainer = (props) => {
     history.push(`/properties`);
   };
 
-  // const handleCategoryAdd = async (categoryId, propertyId) => {
-  //   console.log(propertyId)
-  //   console.log(categoryId)
-  //   const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
-  //   setProperties((prevState) =>
-  //     prevState.map((property) => {
-  //       return property.propertyId === Number(propertyId)
-  //         ? updatedProperty
-  //         : property;
-  //     })
-  //   );
+  const handleCategoryAdd = async (categoryId, propertyId) => {
+    console.log(propertyId)
+    console.log(categoryId)
+    const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
+    setProperties((prevState) =>
+      prevState.map((property) => {
+        return property.propertyId === Number(propertyId)
+          ? updatedProperty
+          : property;
+      })
+    );
     setToggle((prev) => !prev);
     history.push(`/properties/${propertyId}`);
   };
