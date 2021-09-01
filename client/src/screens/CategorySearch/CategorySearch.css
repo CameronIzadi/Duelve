@@ -10,9 +10,9 @@
   right: 0%;
 }
 
-.classesCover:hover {
+/* .classesCover:hover {
   opacity: 70%;
-}
+} */
 
 .classesContent {
   display: flex;

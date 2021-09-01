@@ -38,10 +38,10 @@
   align-self: flex-end;
 }
 
-.deleteDetail:hover,
+/* .deleteDetail:hover,
 .editDetail:hover {
   opacity: 75%;
-}
+} */
 /* from: https://www.w3schools.com/howto/howto_css_text_buttons.asp */
 .deleteDetail {
   background-color: rgb(187, 53, 187);

@@ -36,11 +36,11 @@
   font-size: 16px;
 }
 
-.create:hover,
+/* .create:hover,
 .logout:hover,
 .login:hover {
   opacity: 75%;
-}
+} */
 
 .logout {
   background-color: rgb(187, 53, 187);
