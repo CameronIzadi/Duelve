@@ -11,6 +11,7 @@
 #name {
   display: inline-block;
   text-decoration: none;
+  color: purple;
 }
 
 /* .user {

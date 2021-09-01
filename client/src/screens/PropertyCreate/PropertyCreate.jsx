@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 export default function PropertyCreate(props) {
   const [selectedCategory, setSelectedCategory] = useState('default')
-  const [postProperty, setPostProperty] = useState(null)
   const [formData, setFormData] = useState({
     street: '',
     price: 0,
@@ -17,7 +16,6 @@ export default function PropertyCreate(props) {
     picture_4: '',
     picture_5: '',
   });
-  // const { street, price, bed, bath, sqft, seller_info, amenities, picture_1, picture_2, picture_3, picture_4, picture_5 } = formData;
   const { handleCreate, categories } = props;
 
   const handleChange = (e) => {
@@ -33,7 +31,6 @@ export default function PropertyCreate(props) {
         const option = categories.find(
           (category) => category.name === selectedCategory
         );
-       console.log(option.id)
         handleCreate(formData, option.id);
     };
 
@@ -41,9 +38,7 @@ export default function PropertyCreate(props) {
     setSelectedCategory(e.target.value);
   }
 
-  console.log(postProperty)
-  console.log(setPostProperty)
-  console.log(selectedCategory)
+
 
   return (
     <form

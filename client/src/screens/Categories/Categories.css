@@ -1,0 +1,11 @@
+.welcomeDiv {
+  margin: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}

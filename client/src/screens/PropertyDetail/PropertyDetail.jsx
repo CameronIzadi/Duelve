@@ -15,7 +15,6 @@ export default function PropertyDetail(props) {
   useEffect(() => {
     const fetchProperty = async () => {
       const singleProperty = await getOneProperty(id)
-      console.log(singleProperty)
       setPropertyData(singleProperty);
     }
     fetchProperty();

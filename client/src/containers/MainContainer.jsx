@@ -16,11 +16,9 @@ const MainContainer = (props) => {
   const history = useHistory();
   const [toggle, setToggle] = useState(true)
   
-  console.log(toggle)
   useEffect(() => {
     const fetchProperties = async () => {
       const properties = await getAllProperties();
-      console.log(properties)
       setProperties(properties);
     };
     fetchProperties();
@@ -29,7 +27,6 @@ const MainContainer = (props) => {
   useEffect(() => {
     const fetchCategories = async () => {
       const categories = await getAllCategories();
-      console.log(categories)
       setCategories(categories);
     };
     fetchCategories();
@@ -70,6 +67,7 @@ const MainContainer = (props) => {
       })
     );
     setToggle((prev) => !prev);
+    console.log(toggle)
     history.push(`/properties/${propertyId}`);
   };
 
