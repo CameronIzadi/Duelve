@@ -45,11 +45,6 @@
   align-self: flex-end;
 }
 
-.deleteDetail {
-  position: absolute;
-  bottom: 0;
-}
-
 @media (max-width: 900px) {
   .pic1,
   .pic2,
