@@ -37,6 +37,8 @@ export default function PropertyCreate(props) {
     handleCreate(e)
   }
 
+  
+
   const onChange = async (e) => {
     const selected = parseInt(e.target.value);
     setSelectedCategory(selected)

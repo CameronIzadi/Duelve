@@ -34,7 +34,6 @@ const MainContainer = (props) => {
   }, []);
 
   
-
   const handleCreate = async (formData) => {
     const PropertyData = await postProperty(formData);
     setProperties((prevState) => [...prevState, PropertyData]);
