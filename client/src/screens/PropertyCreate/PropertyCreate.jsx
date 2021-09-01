@@ -17,7 +17,7 @@ export default function PropertyCreate(props) {
     picture_3: '',
     picture_4: '',
     picture_5: '',
-    category_id: '',
+    category_id: 0,
   });
   // const { street, price, bed, bath, sqft, seller_info, amenities, picture_1, picture_2, picture_3, picture_4, picture_5 } = formData;
   const { handleCreate, categories } = props;
@@ -32,16 +32,25 @@ export default function PropertyCreate(props) {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const postProperty = await addCategoryToProperty(id, selectedCategory);
+    const postProperty = await addCategoryToProperty(selectedCategory, id);
     setPostProperty(postProperty)
+    handleCreate(e)
   }
+
+  const onChange = async (e) => {
+    const selected = parseInt(e.target.value);
+    setSelectedCategory(selected)
+  }
+
+  console.log(postProperty)
+  console.log(setPostProperty)
+  console.log(selectedCategory)
 
   return (
     <form
       onSubmit={(e) => {
-        e.preventDefault();
-        handleCreate(formData);
+        e.preventDefault()
+        handleSubmit(formData);
       }}
     >
       <h3>Create Property</h3>
@@ -93,20 +102,23 @@ export default function PropertyCreate(props) {
         Picture_5
         <input type='text' name='picture_5' value={formData.picture_5} onChange={handleChange} />
       </label>
+
       <select
-            value={formData.category_id}
+            value={formData.category?.name}
             placeholder="Category"
-          onChange={handleChange}
+          onChange={onChange}
           name='category_id'
           >
             <option disabled value="default">
               All Categories
-            </option>
+        </option>
+        
             {categories?.map((category) => (
               <option value={category.id} key={category.id}>
                 {category.name}
               </option>
-            ))}
+            ))}
+        
           </select>
       <button>Submit</button>
     </form>

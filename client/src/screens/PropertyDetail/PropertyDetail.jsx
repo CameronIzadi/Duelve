@@ -3,6 +3,7 @@ import { getOneProperty } from '../../services/properties'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import "./PropertyDetail.css"
+import PropertyEdit from "../PropertyEdit/PropertyEdit"
 // import { deleteProperty } from '../../services/properties'
 
 export default function PropertyDetail(props) {
@@ -72,7 +73,9 @@ export default function PropertyDetail(props) {
       <button className="deleteDetail" onClick={handleSubmit}>Delete Property</button>
 
       <Link to={`/properties/${singleProperty?.id}/edit`}>
-        <button className="editDetail">Edit Property</button>
+          <button className="editDetail">
+            <PropertyEdit singleProperty={singleProperty}/>
+            Edit Property</button>
       </Link>
     </div>
 
