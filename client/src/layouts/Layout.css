@@ -14,9 +14,32 @@
   color: purple;
 }
 
-/* .user {
-  text-align: left;
-} */
+.create {
+  background-color: rgb(187, 53, 187);
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.create:hover,
+.logout:hover {
+  opacity: 75%;
+}
+
+.logout {
+  background-color: rgb(187, 53, 187);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 #name:visited {
   color: black;
@@ -29,9 +52,3 @@
 #name:active {
   color: black;
 }
-/* 
-.logout {
-  position: absolute;
-  top: 10px;
-  right: 0;
-} */

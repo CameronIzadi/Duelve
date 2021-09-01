@@ -38,6 +38,33 @@
   align-self: flex-end;
 }
 
+.deleteDetail:hover,
+.editDetail:hover {
+  opacity: 75%;
+}
+/* from: https://www.w3schools.com/howto/howto_css_text_buttons.asp */
+.deleteDetail {
+  background-color: rgb(187, 53, 187);
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.editDetail {
+  background-color: rgb(187, 53, 187);
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 @media (max-width: 900px) {
   .pic1,
   .pic2,
