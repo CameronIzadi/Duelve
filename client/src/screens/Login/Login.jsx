@@ -50,9 +50,9 @@ export default function Login(props) {
           </label>
         </div>
         <br />
+        <button>Submit</button>
         <h3>Forgot Password?</h3>
       <Link to='/register'>Register</Link>
-        <button>Submit</button>
       </div>
     </form>
   );
