@@ -1,4 +1,3 @@
-import { addCategoryToProperty } from '../../services/categories';
 import { useState } from 'react';
 
 export default function PropertyCreate(props) {

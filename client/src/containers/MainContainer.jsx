@@ -16,6 +16,7 @@ const MainContainer = (props) => {
   const history = useHistory();
   const [toggle, setToggle] = useState(true)
   
+  console.log(toggle)
   useEffect(() => {
     const fetchProperties = async () => {
       const properties = await getAllProperties();

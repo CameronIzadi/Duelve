@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom"
 import { getOneProperty } from '../../services/properties'
 
 export default function PropertyCreate(props) {
-  const [selectedProperty, setSelectedProperty] = useState('default')
-  const [updateProperty, setUpdateProperty] = useState(null)
   const [formData, setFormData] = useState({
     street: '',
     price: 0,
@@ -21,7 +19,7 @@ export default function PropertyCreate(props) {
     picture_5: '',
   });
 
-  const { handleUpdate, categories } = props;
+  const { handleUpdate } = props;
   const { id } = useParams()  
   
   useEffect(() => {
@@ -55,11 +53,11 @@ export default function PropertyCreate(props) {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const updateProperty = await putProperty(id, selectedProperty);
-    setUpdateProperty(updateProperty)
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const updateProperty = await putProperty(id, selectedProperty);
+  //   setUpdateProperty(updateProperty)
+  // }
 
   return (
     <form
