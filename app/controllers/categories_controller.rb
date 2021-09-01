@@ -15,10 +15,11 @@ class CategoriesController < ApplicationController
 
 
   # GET /properties/1/categories/2
-  def add_category_to_property
-    @property = Property.find(params[:id])
-    @category = Category.find(params[:category_id])
+  def add_to_property
+    @property = Property.find(params[:propertyId])
+    @category = Category.find(params[:categoryId])
 
     @property.categories << @category
+    render json: @property
   end
 end

@@ -93,21 +93,6 @@ export default function PropertyCreate(props) {
         Picture_5
         <input type='text' name='picture_5' value={formData.picture_5} onChange={handleChange} />
       </label>
-      <select
-            value={formData.category_id}
-            placeholder="Category"
-          onChange={handleChange}
-          name='category_id'
-          >
-            <option disabled value="default">
-              All Categories
-            </option>
-            {categories?.map((category) => (
-              <option value={category.id} key={category.id}>
-                {category.name}
-              </option>
-            ))}
-          </select>
       <button>Submit</button>
     </form>
   );

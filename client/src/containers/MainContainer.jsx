@@ -14,7 +14,8 @@ const MainContainer = (props) => {
   const [categories, setCategories] = useState([]);
   const { currentUser } = props;
   const history = useHistory();
-
+  const [toggle, setToggle] = useState(true)
+  
   useEffect(() => {
     const fetchProperties = async () => {
       const properties = await getAllProperties();
@@ -34,9 +35,10 @@ const MainContainer = (props) => {
   }, []);
 
   
-  const handleCreate = async (formData) => {
+  const handleCreate = async (formData, id) => {
     const PropertyData = await postProperty(formData);
     setProperties((prevState) => [...prevState, PropertyData]);
+    handleCategoryAdd(id, PropertyData.id)
     history.push('/properties');
   };
 
@@ -56,6 +58,8 @@ const MainContainer = (props) => {
   };
 
   const handleCategoryAdd = async (categoryId, propertyId) => {
+    console.log(propertyId)
+    console.log(categoryId)
     const updatedProperty = await addCategoryToProperty(categoryId, propertyId);
     setProperties((prevState) =>
       prevState.map((property) => {
@@ -64,7 +68,7 @@ const MainContainer = (props) => {
           : property;
       })
     );
-    props.setToggleFetch((prev) => !prev);
+    setToggle((prev) => !prev);
     history.push(`/properties/${propertyId}`);
   };
 

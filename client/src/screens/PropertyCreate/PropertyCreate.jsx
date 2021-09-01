@@ -17,11 +17,9 @@ export default function PropertyCreate(props) {
     picture_3: '',
     picture_4: '',
     picture_5: '',
-    category_id: 0,
   });
   // const { street, price, bed, bath, sqft, seller_info, amenities, picture_1, picture_2, picture_3, picture_4, picture_5 } = formData;
   const { handleCreate, categories } = props;
-  const { id } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,17 +29,17 @@ export default function PropertyCreate(props) {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    const postProperty = await addCategoryToProperty(selectedCategory, id);
-    setPostProperty(postProperty)
-    handleCreate(e)
-  }
+     const handleSubmit = async (e) => {
+        e.preventDefault();
+        const option = categories.find(
+          (category) => category.name === selectedCategory
+        );
+       console.log(option.id)
+        handleCreate(formData, option.id);
+    };
 
-  
-
-  const onChange = async (e) => {
-    const selected = parseInt(e.target.value);
-    setSelectedCategory(selected)
+  const onChange = (e) => {
+    setSelectedCategory(e.target.value);
   }
 
   console.log(postProperty)
@@ -50,10 +48,7 @@ export default function PropertyCreate(props) {
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault()
-        handleSubmit(formData);
-      }}
+      onSubmit={handleSubmit}
     >
       <h3>Create Property</h3>
       <label>
@@ -106,7 +101,7 @@ export default function PropertyCreate(props) {
       </label>
 
       <select
-            value={formData.category?.name}
+            value={selectedCategory}
             placeholder="Category"
           onChange={onChange}
           name='category_id'
@@ -116,7 +111,7 @@ export default function PropertyCreate(props) {
         </option>
         
             {categories?.map((category) => (
-              <option value={category.id} key={category.id}>
+              <option value={category.name} key={category.id}>
                 {category.name}
               </option>
             ))}
