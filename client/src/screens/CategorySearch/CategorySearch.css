@@ -26,10 +26,6 @@
   text-align: center;
 }
 
-.street:hover {
-  opacity: 65%;
-}
-
 #lol {
   position: absolute;
   bottom: 0%;
@@ -37,15 +33,9 @@
 
 @media (max-width: 800px) {
   .classesRoot {
-    /* display: block; */
-    padding: 20px;
+    display: block;
   }
   .classesCover {
-    width: 300px;
-  }
-
-  .classesContent {
-    display: block;
-    height: 140px;
+    position: relative;
   }
 }
