@@ -37,10 +37,12 @@
 .deleteDetail {
   position: absolute;
   bottom: 0;
+  right: 20%;
 }
 
 .editDetail {
   position: absolute;
+  bottom: 0;
 }
 
 @media (max-width: 900px) {
