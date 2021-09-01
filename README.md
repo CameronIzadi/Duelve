@@ -133,7 +133,7 @@ src
 | Styling part 3         |    H     |     4 hrs      |     3 hrs     |    2 hrs    |
 | Debugging              |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
 | Testing functionality  |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
-| TOTAL                  |    H     |     48 hrs     |     42hrs     |    45TBD    |
+| TOTAL                  |    H     |     48 hrs     |     42hrs     |    45hrs    |
 
 <br>
 
