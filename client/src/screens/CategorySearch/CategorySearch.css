@@ -55,3 +55,9 @@
     position: relative;
   }
 }
+
+@media (max-width: 500px) {
+  .classesCover {
+    width: 300px;
+  }
+}
