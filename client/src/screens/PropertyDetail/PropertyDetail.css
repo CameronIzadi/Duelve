@@ -37,7 +37,7 @@
 .parenteditdelete {
   display: flex;
   justify-content: center;
-  align-content: flex-end;
+  align-self: flex-end;
 }
 
 /* .deleteDetail {
