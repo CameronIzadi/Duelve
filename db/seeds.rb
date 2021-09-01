@@ -32,13 +32,13 @@ User.destroy_all
   puts "#{Category.count} categories created."
 
   Property.create!(
-    street: "1234 Test Street",
-    price: 5000,
+    street: "88 Livingston Drive",
+    price: 80000,
     bed: 2,
     bath: 3,
-    sqft: 1234,
-    seller_info: "Broke, Morgan Steet",
-    amenities: "Wifi, Free breakfast",
+    sqft: 3500,
+    seller_info: "Keller Williams Inc.",
+    amenities: "High Speed Wifi, Free Breakfast",
     picture_1: "https://cf.bstatic.com/images/hotel/max1024x768/312/312698222.jpg",
     picture_2: "https://photos.zillowstatic.com/fp/413926df865548728f4691ae7bed0ab0-cc_ft_768.webp",
     picture_3: "https://photos.zillowstatic.com/fp/17a4490fef4ec963cb3f9028b7579371-cc_ft_576.webp",
@@ -50,13 +50,13 @@ User.destroy_all
 
 
   Property.create!(
-    street: "Pretty Home wow",
-    price: 7000,
+    street: "56 Jerimiah Road",
+    price: 123000,
     bed: 3,
     bath: 5,
     sqft: 2400,
-    seller_info: "More stuff org",
-    amenities: "Free Money",
+    seller_info: "Realtor Net",
+    amenities: "Furniture Included",
     picture_1: "https://photos.zillowstatic.com/fp/e8a9fea819687e22b0255ef52079c43e-p_e.jpg",
     picture_2: "https://photos.zillowstatic.com/fp/73770afdec9d09531e6a6e18042536e8-cc_ft_576.webp",
     picture_3: "https://photos.zillowstatic.com/fp/356e84a16e69917aaf265a5d55c28b7e-cc_ft_384.webp",

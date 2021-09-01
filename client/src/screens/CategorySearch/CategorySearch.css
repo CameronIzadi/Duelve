@@ -5,6 +5,7 @@
 
 .classesCover {
   width: 500px;
+  height: 350px;
   position: absolute;
   right: 0%;
 }
@@ -18,6 +19,21 @@
   flex-direction: column;
 }
 
+.street {
+  text-decoration: none !important;
+}
+
+.street:visited {
+  color: black;
+}
+
+.street:link {
+  color: black;
+}
+
+.street:active {
+  color: black;
+}
 .bath {
   padding: 30px;
 }
