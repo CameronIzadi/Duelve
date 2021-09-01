@@ -50,12 +50,6 @@
   bottom: 0;
 }
 
-.editDetail {
-  position: absolute;
-  bottom: 0;
-  right: ;
-}
-
 @media (max-width: 900px) {
   .pic1,
   .pic2,
