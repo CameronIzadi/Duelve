@@ -20,7 +20,7 @@ export default function PropertyCreate(props) {
     picture_4: '',
     picture_5: '',
   });
-  // const { street, price, bed, bath, sqft, seller_info, amenities, picture_1, picture_2, picture_3, picture_4, picture_5 } = formData;
+
   const { handleUpdate, categories } = props;
   const { id } = useParams()  
   
