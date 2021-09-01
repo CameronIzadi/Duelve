@@ -1,6 +1,7 @@
 import { putProperty } from '../../services/properties';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom"
+import { getOneProperty } from '../../services/properties'
 
 export default function PropertyCreate(props) {
   const [selectedProperty, setSelectedProperty] = useState('default')
@@ -18,18 +19,29 @@ export default function PropertyCreate(props) {
     picture_3: '',
     picture_4: '',
     picture_5: '',
-    category_id: '',
   });
   // const { street, price, bed, bath, sqft, seller_info, amenities, picture_1, picture_2, picture_3, picture_4, picture_5 } = formData;
   const { handleUpdate, categories } = props;
-  const { id } = useParams
-
-
+  const { id } = useParams()  
+  
   useEffect(() => {
     const fetchProperty = async () => {
       const singleProperty = await getOneProperty(id)
       console.log(singleProperty)
-      setPropertyData(singleProperty);
+      setFormData({
+        street: singleProperty.street,
+        price: singleProperty.price,
+        bed: singleProperty.bed,
+        bath: singleProperty.bath,
+        sqft: singleProperty.sqft,
+        seller_info: singleProperty.seller_info,
+        amenities: singleProperty.amenities,
+        picture_1: singleProperty.picture_1,
+        picture_2: singleProperty.picture_2,
+        picture_3: singleProperty.picture_3,
+        picture_4: singleProperty.picture_4,
+        picture_5: singleProperty.picture_5,
+      });
     }
     fetchProperty();
   }, [id])
