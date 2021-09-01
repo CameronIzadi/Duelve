@@ -8,7 +8,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -52,12 +52,16 @@
 } */
 
 @media (max-width: 900px) {
-  .pic1,
   .pic2,
   .pic3,
   .pic4,
   .pic5 {
     width: 250px;
+  }
+  .pic1 {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
   }
 }
 
