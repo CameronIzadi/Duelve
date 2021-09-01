@@ -16,7 +16,7 @@ export const postProperty = async (propertyData) => {
 };
 
 export const putProperty = async (id, propertyData) => {
-  const resp = await api.put(`/property/${id}`, { property: propertyData });
+  const resp = await api.put(`/properties/${id}`, { property: propertyData });
   return resp.data;
 };
 
