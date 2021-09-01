@@ -25,7 +25,6 @@
 
 ## MVP
 
-
 _The **Duelve** MVP is to have full CRUD, hand rolled css, and authentication for users. Duelve will also display the property listings and have proper styling with flexbox/grid and 2 media queries, and a detail page for properties._
 
 <br>
@@ -43,15 +42,11 @@ _The **Duelve** MVP is to have full CRUD, hand rolled css, and authentication fo
 
 ### Libraries and Dependencies
 
-
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Rendering front page._ |
-|   React Router   | _Rendering components._ |
-|      Axios       | _For communicating with the backend._ |
-
-
-
+|   Library    | Description                           |
+| :----------: | :------------------------------------ |
+|    React     | _Rendering front page._               |
+| React Router | _Rendering components._               |
+|    Axios     | _For communicating with the backend._ |
 
 <br>
 
@@ -89,13 +84,11 @@ _The **Duelve** MVP is to have full CRUD, hand rolled css, and authentication fo
 
 #### Component Tree
 
-
 [Component Tree](https://i.imgur.com/LlaqJig.png)
 
 #### Component Architecture
 
-
-``` structure
+```structure
 src
 |__ containers/
       |__ MainContainer.jsx
@@ -121,30 +114,26 @@ src
 
 #### Time Estimates
 
-
-| Task                  | Priority | Estimated Time | Time Invested | Actual Time |
-| --------------------- | :------: | :------------: | :-----------: | :---------: |
-| Creating Branches     |    L     |     1 hrs      |     1 hrs     |    3 hrs    |
-| Initial Skeleton.     |    H     |     1 hrs      |     1 hrs     |     TBD     |
-| Backend Controllers   |    H     |     3 hrs      |     2 hrs     |     TBD     |
-| Backend Controllers p2|    H     |     1 hrs      |     1 hrs     |     TBD     |
-| Component Setup       |    H     |     3 hrs      |     4 hrs     |     TBD     |
-| DB Setup              |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Backend Function debug|    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Landing Page.         |    H     |     4 hrs      |     2 hrs     |     TBD     |
-| Detail Page           |    H     |     3 hrs      |     2 hrs     |     TBD     |
-| Property Listings     |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Adding Search Bar     |    H     |     2 hrs      |     2 hrs     |     TBD     |
-| Sign-in/Sign-up       |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Styling part 1        |    H     |     4 hrs      |     3 hrs     |     TBD     |
-| Styling part 2        |    H     |     4 hrs      |     3 hrs     |     TBD     |
-| Styling part 3        |    H     |     4 hrs      |     3 hrs     |     TBD     |
-| Debugging             |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Testing functionality |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| TOTAL                 |    H     |     48 hrs     |     42hrs     |     TBD     |
-
-
-
+| Task                   | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------- | :------: | :------------: | :-----------: | :---------: |
+| Creating Branches      |    L     |     1 hrs      |     1 hrs     |    3 hrs    |
+| Initial Skeleton.      |    H     |     1 hrs      |     1 hrs     |    3 hrs    |
+| Backend Controllers    |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| Backend Controllers p2 |    H     |     1 hrs      |     1 hrs     |    3 hrs    |
+| Component Setup        |    H     |     3 hrs      |     4 hrs     |    2 hrs    |
+| DB Setup               |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Backend Function debug |    H     |     3 hrs      |     3 hrs     |    2 hrs    |
+| Landing Page.          |    H     |     4 hrs      |     2 hrs     |    3 hrs    |
+| Detail Page            |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| Property Listings      |    H     |     3 hrs      |     3 hrs     |    2 hrs    |
+| Adding Search Bar      |    H     |     2 hrs      |     2 hrs     |    3 hrs    |
+| Sign-in/Sign-up        |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Styling part 1         |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Styling part 2         |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Styling part 3         |    H     |     4 hrs      |     3 hrs     |    2 hrs    |
+| Debugging              |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Testing functionality  |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| TOTAL                  |    H     |     48 hrs     |     42hrs     |    45TBD    |
 
 <br>
 
@@ -152,11 +141,10 @@ src
 
 #### ERD Model
 
-
 [ERD](https://i.imgur.com/fdUaceG.png)
 <br>
 
-***
+---
 
 ## Post-MVP
 
@@ -165,10 +153,21 @@ src
 - Comments
 - Form for contacting seller
 
-***
+---
 
 ## Code Showcase
 
+```
+  const handleCreate = async (formData, id) => {
+    const PropertyData = await postProperty(formData);
+    setProperties((prevState) => [...prevState, PropertyData]);
+    handleCategoryAdd(id, PropertyData.id)
+    history.push('/properties');
+  };
+```
 
 ## Code Issues & Resolutions
 
+- Had an issue getting the single property to edit the file. It only existed in the
+  Property Detail. Had to move the use effect to the main container and then move the
+  single property into the main container.
