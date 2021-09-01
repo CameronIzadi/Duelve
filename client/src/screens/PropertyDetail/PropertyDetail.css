@@ -34,6 +34,10 @@
   grid-area: 2 / 3 / 3 / 4;
 }
 
+.deleteDetail {
+  position: absolute;
+}
+
 @media (max-width: 900px) {
   .pic1,
   .pic2,
