@@ -33,7 +33,7 @@
 }
 
 .parenteditdelete {
-  display: block;
+  display: flex;
   justify-content: center;
   align-self: flex-end;
 }
