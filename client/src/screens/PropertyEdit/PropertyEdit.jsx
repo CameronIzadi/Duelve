@@ -1,5 +1,6 @@
 import { putProperty } from '../../services/properties';
 import { useState } from 'react';
+import { useParams } from "react-router-dom"
 
 export default function PropertyCreate(props) {
   const [selectedProperty, setSelectedProperty] = useState('default')
@@ -20,9 +21,20 @@ export default function PropertyCreate(props) {
     category_id: '',
   });
   // const { street, price, bed, bath, sqft, seller_info, amenities, picture_1, picture_2, picture_3, picture_4, picture_5 } = formData;
-  const { handleUpdate, categories, singleProperty } = props;
-  const { id } = props;
+  const { handleUpdate, categories } = props;
+  const { id } = useParams
 
+
+  useEffect(() => {
+    const fetchProperty = async () => {
+      const singleProperty = await getOneProperty(id)
+      console.log(singleProperty)
+      setPropertyData(singleProperty);
+    }
+    fetchProperty();
+  }, [id])
+
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
