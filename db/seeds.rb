@@ -66,6 +66,40 @@ User.destroy_all
     categories: [@houses],
   )
 
+  Property.create!(
+    street: "88 Muhlenberg Ave",
+    price: 503000,
+    bed: 3,
+    bath: 5,
+    sqft: 3400,
+    seller_info: "Realtor Net",
+    amenities: "None",
+    picture_1: "https://photos.zillowstatic.com/fp/2bc36d19be7744e7af6abe191ad6f402-cc_ft_768.webp",
+    picture_2: "https://photos.zillowstatic.com/fp/c4480f9614cee84ad0bf73941d2cf75d-cc_ft_576.webp",
+    picture_3: "https://photos.zillowstatic.com/fp/f6a996fa846f9cf1fda0837c04ad8f0f-cc_ft_576.webp",
+    picture_4: "https://photos.zillowstatic.com/fp/71365544d363783614f93512e09c1fe3-cc_ft_384.webp",
+    picture_5: "https://photos.zillowstatic.com/fp/cfe38dcf367cf665512a0caf68fa7ede-cc_ft_384.webp",
+    user: @gabriel,
+    categories: [@townhomes],
+  )
+
+
+  Property.create!(
+    street: "72 forest lake",
+    price: 631000,
+    bed: 2,
+    bath: 3,
+    sqft: 2700,
+    seller_info: "Realtor Net",
+    amenities: "None",
+    picture_1: "https://photos.zillowstatic.com/fp/1f4bad1ef54d14d81821ebb9441303b6-cc_ft_768.webp",
+    picture_2: "https://photos.zillowstatic.com/fp/8f83f8049be6e375b9abe446c0cbf964-cc_ft_576.webp",
+    picture_3: "https://photos.zillowstatic.com/fp/fc68f6aa72a463ece7ff39dc091fef44-cc_ft_576.webp",
+    picture_4: "https://photos.zillowstatic.com/fp/be42b3b7fd4613a4030548232602d8e2-cc_ft_384.webp",
+    picture_5: "https://photos.zillowstatic.com/fp/3a9d1591a5cf61a579544c026454b5d5-cc_ft_384.webp",
+    user: @gabriel,
+    categories: [@condos],
+  )
 
   puts "#{Property.count} properties created."
 
